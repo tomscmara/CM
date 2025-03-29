@@ -1,0 +1,40 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 10px;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #030303;
+}
+
+.districts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.district-card {
+    background-color: #bebebe;
+    border: 2px solid #444;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.district-card:hover {
+    transform: scale(1.05);
+    border-color: #ffaa00;
+}
+
+.district-card h2 {
+    color: #ffeecc;
+    margin-bottom: 10px;
+}
