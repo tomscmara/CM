@@ -3,7 +3,7 @@ header {
     justify-content: space-between;
     font-family: 'Segoe UI', sans-serif;
     align-items: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
 }
 
@@ -40,16 +40,17 @@ header {
     padding: 12px;
     width: 90%;
     margin-bottom: 10px;
-    background-color: #c9c9c9;
-    border: 2px solid blue;
+    background-color: #000000;
+    border: 2px solid rgb(227, 163, 1);
     border-radius: 12px;
     text-align: center;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-family: sans-serif;
 }
 
 .menu-option:hover {
-    background-color: #e0e0e0;
+    background-color: #f69c00;
     text-decoration: none;
+    transition: 400ms;
 }

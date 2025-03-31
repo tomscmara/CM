@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 10px;
-    background: #ffffff;
-    color: #000000;
+    background: black;
+    color: red;
     text-align: center;
 }
 
 h1 {
     margin-bottom: 30px;
-    font-size: 2.5rem;
-    color: #030303;
+    font-size: 3rem;
+    color: gold;
+    text-shadow: 0 0 15px red;
 }
 
 .districts-container {
@@ -22,19 +25,26 @@ h1 {
 }
 
 .district-card {
-    background-color: #bebebe;
-    border: 2px solid #444;
+    background-color: rgba(50, 0, 0, 0.9);
+    border: 2px solid gold;
     padding: 20px;
     border-radius: 10px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 0 10px red;
 }
 
 .district-card:hover {
     transform: scale(1.05);
-    border-color: #ffaa00;
+    box-shadow: 0 0 20px gold;
 }
 
 .district-card h2 {
-    color: #ffeecc;
+    color: gold;
     margin-bottom: 10px;
+    text-shadow: 0 0 10px red;
+}
+
+.district-card p {
+    color: white;
+    font-size: 1rem;
 }

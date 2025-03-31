@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  .hero-section {
+    font-family: 'Orbitron', sans-serif;
+    background-color: black;
+    color: red;
+}
+
+.hero-section {
     background-image: url('https://i.imgur.com/Mtj1p1Y.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
@@ -14,74 +16,76 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .overlay {
-    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 40px;
     text-align: center;
     border: 3px solid gold;
     border-radius: 20px;
-  }
-  
-  .overlay h1 {
+    box-shadow: 0 0 15px gold;
+}
+
+.overlay h1 {
     font-size: 4rem;
-    color: rgb(37, 37, 37);
+    color: red;
     margin-bottom: 10px;
-    text-shadow: 0 0 10px rgb(107, 91, 0);
-  }
-  
-  .overlay p {
+    text-shadow: 0 0 15px red;
+}
+
+.overlay p {
     font-size: 1.5rem;
-    color: #000000;
-  }
-  
-  .content {
+    color: white;
+}
+
+.content {
     padding: 60px 20px;
     text-align: center;
-  }
-  
-  .content h2 {
+}
+
+.content h2 {
     font-size: 2.5rem;
-    color: rgb(71, 0, 0);
+    color: gold;
     margin-bottom: 20px;
-  }
-  
-  .content p {
+    text-shadow: 0 0 10px red;
+}
+
+.content p {
     max-width: 800px;
     margin: 0 auto 40px;
     font-size: 1.2rem;
-    color: #ffffff;
-  }
-  
-  .values {
+    color: white;
+}
+
+.values {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-  }
-  
-  .value-card {
-    background-color: #bdbdbd;
+}
+
+.value-card {
+    background-color: rgba(50, 0, 0, 0.8);
     border: 2px solid gold;
     border-radius: 12px;
     padding: 30px;
     width: 250px;
     transition: transform 0.2s;
-  }
-  
-  .value-card:hover {
+    box-shadow: 0 0 10px red;
+}
+
+.value-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px gold;
-  }
-  
-  .value-card h3 {
-    color: rgb(0, 0, 0);
+    box-shadow: 0 0 20px red;
+}
+
+.value-card h3 {
+    color: gold;
     margin-bottom: 10px;
-  }
-  
-  .value-card p {
-    color: #000000;
+}
+
+.value-card p {
+    color: white;
     font-size: 1rem;
-  }
-  
+}
