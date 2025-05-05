@@ -8,13 +8,7 @@ body {
     text-align: center;
 }
 
-/* Slideshow Container */
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-}
+
 
 /* Slide */
 .slide {
@@ -41,20 +35,42 @@ body {
     transform: translateY(-50%);
     background-color: gold;
     color: black;
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
+    z-index: 10; /* Ensure buttons stay above slides */
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+/* Keep them inside the box */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; /* Prevent arrows from going outside */
+    overflow: visible;
+}
+
+/* Fix positioning */
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
 
 .prev:hover, .next:hover {
     background-color: red;
     color: white;
 }
+
 
 /* Slide Text */
 .slide h2 {
