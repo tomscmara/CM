@@ -9,22 +9,35 @@ body {
     text-align: center;
 }
 
+.hero-section {
+    background: url('../images/district12.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
 h1 {
-    margin-bottom: 30px;
     font-size: 3rem;
     color: gold;
     text-shadow: 0 0 15px red;
 }
 
-.districts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+.values {
+    display: flex;
+    overflow-x: auto;
     gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+    padding: 20px;
 }
 
-.district-card {
+.value-card {
+    min-width: 300px;
     background-color: rgba(50, 0, 0, 0.9);
     border: 2px solid gold;
     padding: 20px;
@@ -33,18 +46,8 @@ h1 {
     box-shadow: 0 0 10px red;
 }
 
-.district-card:hover {
+.value-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px gold;
 }
 
-.district-card h2 {
-    color: gold;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px red;
-}
-
-.district-card p {
-    color: white;
-    font-size: 1rem;
-}

@@ -2,83 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width">
-            <title>Hunger</title>
-            <link href="css/menu.css" rel="stylesheet" type="text/css"/>
-            <link href="css/destritos.css" rel="stylesheet" type="text/css"/>
-            <link href="css/footer.css" rel="stylesheet" type="text/css"/>
-
+    <meta name="viewport" content="width=device-width">
+    <title>Hunger</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/perdest.css">
 </head>
 
-    <header>         
+<body>
+    <header>
+        <button class="menu-button">☰</button>
         <div class="menu">
-            <p style="color: white;">X</p>
+            <p class="close-menu">X</p>
             <div class="menu-options">
-                <a class="menu-option" href="index.html">Mundo</a>
-                <a class="menu-option" href="destritos.html">Distritos</a>
-                <a class="menu-option" href="capitolio.html">Capitólio</a>
-                <a class="menu-option" href="personagens.html">Personagens</a>
+                <a class="menu-option" href="../index.html">Mundo</a>
+                <a class="menu-option" href="../destritos.html">Destritos</a>
+                <a class="menu-option" href="../capitolio.html">Capitólio</a>
+                <a class="menu-option" href="../personagens.html">Personagens</a>
             </div>
         </div>
     </header>
 
-    <body>
-        <h1>Districts of Panem</h1>
-    <div class="districts-container">
-        <a href="destritos/destrito1.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 1</h2>
-            <p>Luxury goods</p>
-        </div></a>
-        <a href="destritos/destrito2.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 2</h2>
+    <h1>Districts of Panem</h1>
+
+    <div class="slideshow-container">
+        <button class="prev">◀</button>
+
+        <div class="slide active" style="background-image: url('images/district1.jpg');">
+            <h2><a href="destritos/destrito1.html">District 1</a></h2>
+            <p>Luxury Goods</p>
+        </div>
+        <div class="slide" style="background-image: url('images/district2.jpg');">
+            <h2><a href="destritos/destrito2.html">District 2</a></h2>
             <p>Stonework & Military</p>
-        </div></a>
-        <a href="destritos/destrito3.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 3</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district3.jpg');">
+            <h2 ><a href="destritos/destrito3.html" style="text-decoration: none; color: gold;">District 3</a></h2>
             <p>Technology</p>
-        </div></a>
-        <a href="destritos/destrito4.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 4</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district4.jpg');">
+            <h2><a href="destritos/destrito4.html">District 4</a></h2>
             <p>Fishing</p>
-        </div></a>
-        <a href="destritos/destrito5.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 5</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district5.jpg');">
+            <h2><a href="destritos/destrito5.html">District 5</a></h2>
             <p>Electricity</p>
-        </div></a>
-        <a href="destritos/destrito6.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 6</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district6.jpg');">
+            <h2><a href="destritos/destrito6.html">District 6</a></h2>
             <p>Transportation</p>
-        </div></a>
-        <a href="destritos/destrito7.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 7</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district7.jpg');">
+            <h2><a href="destritos/destrito7.html">District 7</a></h2>
             <p>Woodworks</p>
-        </div></a>
-        <a href="destritos/destrito8.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 8</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district8.jpg');">
+            <h2><a href="destritos/destrito8.html">District 8</a></h2>
             <p>Textiles</p>
-        </div></a>
-        <a href="destritos/destrito9.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 9</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district9.jpg');">
+            <h2><a href="destritos/destrito9.html">District 9</a></h2>
             <p>Grain</p>
-        </div></a>
-        <a href="destritos/destrito10.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 10</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district10.jpg');">
+            <h2><a href="destritos/destrito10.html">District 10</a></h2>
             <p>Livestock</p>
-        </div></a>
-        <a href="destritos/destrito11.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 11</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district11.jpg');">
+            <h2><a href="destritos/destrito11.html">District 11</a></h2>
             <p>Farming</p>
-        </div></a>
-        <a href="destritos/destrito12.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 12</h2>
+        </div>
+        <div class="slide" style="background-image: url('images/district12.jpg');">
+            <h2><a href="destritos/destrito12.html">District 12</a></h2>
             <p>Coal Mining</p>
-        </div></a>
-        <a href="out.html" style="text-decoration: none;"><div class="district-card">
-            <h2>District 13</h2>
-            <p>Nuclear Tech</p>
-        </div></a>
+        </div>
+
+        <button class="next">▶</button>
     </div>
 
+    <!-- Fullscreen Button Below Slideshow -->
+    <button class="fullscreen-btn">🔲 Fullscreen</button>
 
-    </body>
+    <script src="js/perdest.js"></script>
+    <script src="js/menu.js"></script>
+</body>
 </html>

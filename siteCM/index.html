@@ -10,17 +10,18 @@
 
 </head>
 
-    <header>         
-        <div class="menu">
-            X
-            <div class="menu-options">
-                <a class="menu-option" href="index.html">Mundo</a>
-                <a class="menu-option" href="destritos.html">Distritos</a>
-                <a class="menu-option" href="capitolio.html">Capitólio</a>
-                <a class="menu-option" href="personagens.html">Personagens</a>
-            </div>
+<header>
+    <button class="menu-button">☰</button>
+    <div class="menu">
+        <p class="close-menu">X</p>
+        <div class="menu-options">
+            <a class="menu-option" href="../index.html">Mundo</a>
+            <a class="menu-option" href="../destritos.html">Destritos</a>
+            <a class="menu-option" href="../capitolio.html">Capitólio</a>
+            <a class="menu-option" href="../personagens.html">Personagens</a>
         </div>
-    </header>
+    </div>
+</header>
 
     <body>
         <div class="container">
@@ -45,14 +46,7 @@
             </div>
         </div>
         
-        <script>
-            function goToDistrict(number) {
-                window.location.href = `destritos/destrito${number}.html`;
-            }
-            function goToCapitol() {
-                window.location.href = 'capitolio.html';
-            }
-        </script>
+        <script src="js/menu.js"></script>
 
     </body>
 </html>
