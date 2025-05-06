@@ -8,7 +8,16 @@ body {
     text-align: center;
 }
 
-
+/* Centralizar o container do slideshow */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Slide */
 .slide {
@@ -20,15 +29,17 @@ body {
     background-position: center;
     border: 2px solid gold;
     box-shadow: 0 0 15px red;
+    margin: auto;
 }
 
-/* Active Slide */
+/* Slide ativo */
 .slide.active {
     display: block;
     animation: fadeIn 1.5s ease-in-out;
+    margin: auto;
 }
 
-/* Navigation Buttons */
+/* Botões de navegação */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -44,20 +55,9 @@ body {
     justify-content: center;
     border: none;
     border-radius: 50%;
-    z-index: 10; /* Ensure buttons stay above slides */
+    z-index: 10;
 }
 
-/* Keep them inside the box */
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    overflow: hidden; /* Prevent arrows from going outside */
-    overflow: visible;
-}
-
-/* Fix positioning */
 .prev {
     left: 10px;
 }
@@ -71,8 +71,7 @@ body {
     color: white;
 }
 
-
-/* Slide Text */
+/* Texto do slide */
 .slide h2 {
     color: gold;
     text-shadow: 0 0 10px red;
@@ -82,16 +81,16 @@ body {
     font-size: 1.2rem;
 }
 
-a{
+a {
     text-decoration: none;
     color: gold;
 }
 
-p{
+p {
     color: white;
 }
 
-/* Fullscreen Button */
+/* Botão de tela cheia */
 .fullscreen-btn {
     position: relative;
     display: block;
