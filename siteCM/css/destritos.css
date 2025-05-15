@@ -4,14 +4,14 @@ body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 10px;
-    background: black;
+    background:rgb(0, 0, 0);
     color: red;
     text-align: center;
 }
 
 .hero-section {
     background: url('../images/district12.jpg') no-repeat center center/cover;
-    height: 100vh;
+    height: 92vh;
     display: flex;
     justify-content: center;
     align-items: center;

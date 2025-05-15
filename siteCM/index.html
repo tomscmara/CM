@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width">
-            <title>Hunger</title>
-            <link href="css/menu.css" rel="stylesheet" type="text/css"/>
-            <link href="css/index.css" rel="stylesheet" type="text/css"/>
-            <link href="css/footer.css" rel="stylesheet" type="text/css"/>
-
+    <meta name="viewport" content="width=device-width">
+    <title>Hunger</title>
+    <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    
 </head>
 
 <header>
+
+    <img src="imgs/hunger.gif" alt="Hunger Games GIF" style="position: absolute; top: 10px; left: 10px; width: 200px; height: auto;">
+    
     <button class="menu-button">☰</button>
     <div class="menu">
         <p class="close-menu">X</p>
@@ -23,37 +25,40 @@
     </div>
 </header>
 
-    <body>
-        <div class="container">
-            <h1>Welcome to Panem</h1>
-            <p>Select your district</p>
-            <div class="map-container">
-                <img src="imgs/HungerGamesPanem.webp" alt="Map of Panem" class="map">
-                <div class="district" id="districtCapitol" style="top: 29.5%; left: 30.5%;" onclick="goToCapitol()"></div>
-                <div class="district" id="district1" style="top: 17%; left: 32.25%;" onclick="goToDistrict(1)"></div>
-                <div class="district" id="district2" style="top: 43.5%; left: 33.5%;" onclick="goToDistrict(2)"></div>
-                <div class="district" id="district3" style="top: 32%; left: 54%;" onclick="goToDistrict(3)"></div>
-                <div class="district" id="district4" style="top: 27%; left: 12.5%;" onclick="goToDistrict(4)"></div>
-                <div class="district" id="district5" style="top: 51%; left: 21%;" onclick="goToDistrict(5)"></div>
-                <div class="district" id="district6" style="top: 16.5%; left: 60%;" onclick="goToDistrict(6)"></div>
-                <div class="district" id="district7" style="top: 3%; left: 27%;" onclick="goToDistrict(7)"></div>
-                <div class="district" id="district8" style="top: 45%; left: 54.25%;" onclick="goToDistrict(8)"></div>
-                <div class="district" id="district9" style="top: 28.5%; left: 43%;" onclick="goToDistrict(9)"></div>
-                <div class="district" id="district10" style="top: 68.5%; left: 33.75%;" onclick="goToDistrict(10)"></div>
-                <div class="district" id="district11" style="top: 56.75%; left: 49%;" onclick="goToDistrict(11)"></div>
-                <div class="district" id="district12" style="top: 40%; left: 66%;" onclick="goToDistrict(12)"></div>
-                <div class="district" id="district13" style="top: 20%; left: 72%;"><a href="out.html" style="color: red; text-decoration: none;">.</a></div>
-            </div>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Panem</h1>
+        <p>Select your district</p>
+        <div class="map-container">
+            <img src="imgs/HungerGamesPanem.webp" alt="Map of Panem" class="map">
+            <div class="district" id="districtCapitol" style="top: 29.5%; left: 30.5%;" onclick="goToCapitol()"></div>
+            <div class="district" id="district1" style="top: 17%; left: 32.25%;" onclick="goToDistrict(1)"></div>
+            <div class="district" id="district2" style="top: 43.5%; left: 33.5%;" onclick="goToDistrict(2)"></div>
+            <div class="district" id="district3" style="top: 32%; left: 54%;" onclick="goToDistrict(3)"></div>
+            <div class="district" id="district4" style="top: 27%; left: 12.5%;" onclick="goToDistrict(4)"></div>
+            <div class="district" id="district5" style="top: 51%; left: 21%;" onclick="goToDistrict(5)"></div>
+            <div class="district" id="district6" style="top: 16.5%; left: 60%;" onclick="goToDistrict(6)"></div>
+            <div class="district" id="district7" style="top: 3%; left: 27%;" onclick="goToDistrict(7)"></div>
+            <div class="district" id="district8" style="top: 45%; left: 54.25%;" onclick="goToDistrict(8)"></div>
+            <div class="district" id="district9" style="top: 28.5%; left: 43%;" onclick="goToDistrict(9)"></div>
+            <div class="district" id="district10" style="top: 68.5%; left: 33.75%;" onclick="goToDistrict(10)"></div>
+            <div class="district" id="district11" style="top: 56.75%; left: 49%;" onclick="goToDistrict(11)"></div>
+            <div class="district" id="district12" style="top: 40%; left: 66%;" onclick="goToDistrict(12)"></div>
+            <div class="district" id="district13" style="top: 20%; left: 72%;"><a href="out.html" style="color: red; text-decoration: none;">.</a></div>
         </div>
-        
-        <script>
-            function goToDistrict(number) {
-                window.location.href = `destritos/destrito${number}.html`;
-            }
-            function goToCapitol() {
-                window.location.href = 'capitolio.html';
-            }
-        </script>
-<script src="js/menu.js"></script>
-    </body>
+    </div>
+
+    <script>
+        function goToDistrict(number) {
+            window.location.href = `destritos/destrito${number}.html`;
+        }
+        function goToCapitol() {
+            window.location.href = 'capitolio.html';
+        }
+    </script>
+
+    <script src="js/menu.js"></script>
+
+</body>
 </html>
