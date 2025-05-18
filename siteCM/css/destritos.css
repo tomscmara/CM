@@ -29,6 +29,10 @@ h1 {
     text-shadow: 0 0 15px red;
 }
 
+p{
+    color: white;
+}
+
 .values {
     display: flex;
     overflow-x: auto;
