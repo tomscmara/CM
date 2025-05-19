@@ -11,6 +11,14 @@
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
@@ -32,10 +40,10 @@
   </div>
   
   <section class="content">
-    <h2>↓</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">↓</a></h2>
     <p> With clothing factories, loom halls, and thick clouds of pollution we were still the first to rebel after the 74th games. </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>The Bannerworks</h3>
         <p> A restricted Capitol facility where propaganda textiles are created—flags, armbands, and stitched emblems of the Capitol and Snow. No one speaks while working here. </p>
@@ -48,6 +56,9 @@
         <h3>The Stitchspire</h3>
         <p> A towering Capitol-run textile plant at the district’s center that has gleaming chrome needles crown in the roof, constantly emitting steam. </p>
       </div>
+      <div class="value-card">
+        <h3>Fabric Forge</h3>
+        <p>A massive industrial complex of looms, dye vats, and storage warehouses. Known for harsh conditions and its central role in the rebellion.</p>
     </div>
   </section>
   <script src="../js/menu.js"></script>

@@ -11,6 +11,14 @@
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
@@ -32,12 +40,12 @@
   </div>
 
   <section class="content">
-    <h2>↓</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">↓</a></h2>
     <p>
         Their workers spend days among rusteling fruit trees and sizable farms.
     </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>The people</h3>
         <p>Among one of the poorest districts, even tho it's the one with the biggest population.</p>
@@ -50,6 +58,9 @@
         <h3>Delicacies</h3>
         <p>Their signature bread is a dark, crescent-shaped roll dotted with seeds.</p>
       </div>
+      <div class="value-card">
+        <h3>Harvest Fields</h3>
+        <p>Vast crop fields tended by manual labor, overlooked by tall Capitol watchtowers. Site of heavy surveillance and discipline.</p>
     </div>
   </section>
   <script src="../js/menu.js"></script>

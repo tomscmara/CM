@@ -11,6 +11,14 @@
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
@@ -32,10 +40,10 @@
   </div>
   
   <section class="content">
-    <h2>↓</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">↓</a></h2>
     <p> Lumber, forestry, and paper production. Yes we are very experienced with hatchets, axes, saws and tree cutting tools. </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>The Millspire</h3>
         <p> A massive, multi-level, mega-Industrial, vertical sawmill with a skeletal silhouette that grinds day and night. </p>
@@ -48,6 +56,9 @@
         <h3>The Timberline Hall</h3>
         <p> Central command for lumber operations. It's a grand wooden lodge reinforced with steel, filled with wall-sized maps of logging zones and Capitol quotas. </p>
       </div>
+      <div class="value-card">
+        <h3>Timber Yards</h3>
+        <p>Expansive lumber mills and forest harvesting zones where trees are felled and processed. Often flanked by training areas for axe handling.</p>
     </div>
   </section>
   <script src="../js/menu.js"></script>

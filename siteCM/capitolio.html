@@ -2,14 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width">
-                <title>Hunger</title>
-                <link href="css/menu.css" rel="stylesheet" type="text/css"/>
-                <link href="css/destritos.css" rel="stylesheet" type="text/css"/>
-    
+        <meta name="viewport" content="width=device-width">
+        <title>Hunger</title>
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="css/destritos.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
@@ -31,13 +38,13 @@
   </div>
 
   <section class="content">
-    <h2>Welcome, Citizen.</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">Welcome Citizen.</a></h2>
     <p>
       The Capitol stands as the shining heart of Panem — a beacon of progress, peace, and privilege.
       Through our wisdom and strength, the districts are nourished and order is preserved.
     </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>Order</h3>
         <p>The Capitol ensures peace through structure and unwavering law.</p>
@@ -49,6 +56,18 @@
       <div class="value-card">
         <h3>Entertainment</h3>
         <p>The Hunger Games remind us all of the price of rebellion — and the thrill of unity.</p>
+      </div>
+      <div class="value-card">
+        <h3>Luxury</h3>
+        <p>Capitol citizens enjoy the finest food, fashion, and indulgences in Panem.</p>
+      </div>
+      <div class="value-card">
+        <h3>Control</h3>
+        <p>Through surveillance, propaganda, and rationing, we keep Panem safe and efficient.</p>
+      </div>
+      <div class="value-card">
+        <h3>Spectacle</h3>
+        <p>From parades to televised drama, we celebrate life through grand and unforgettable events.</p>
       </div>
     </div>
   </section>

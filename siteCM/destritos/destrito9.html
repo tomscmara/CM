@@ -11,6 +11,14 @@
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
@@ -32,10 +40,10 @@
   </div>
   
   <section class="content">
-    <h2>↓</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">↓</a></h2>
     <p> The industry is centered around farming, though the people face difficult working conditions, as in most of the other districts. </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>The Stalk Rows</h3>
         <p> Endless rows of tall grain stalks that appear to stretch on forever. At night, the rows create eerie shadows, and the wind moving through them sounds like whispers, often making the workers feel as though they are being watched. </p>
@@ -48,6 +56,9 @@
         <h3>The Winnow Docks</h3>
         <p> Where grain shipments are loaded onto large, mechanized barges or railcars, headed to the Capitol. This area is always active, with oversized machines and cranes transferring bags and crates, creating a constant buzz of motion. </p>
       </div>
+      <div class="value-card">
+        <h3>Thresher Fields</h3>
+        <p>Expansive golden farmlands with massive mechanical threshers operating throughout the day during harvest season. A symbol of abundance, yet plagued by harsh labor quotas.</p>
     </div>
   </section>
   <script src="../js/menu.js"></script>
