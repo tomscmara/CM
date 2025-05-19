@@ -11,18 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const holograms = {
         0: "DIST 1.glb",
-        1: "D2.glb",
-        2: "district3.glb",
-        3: "district4.glb",
-        4: "district5.glb",
-        5: "district6.glb",
-        6: "district7.glb",
-        7: "district8.glb",
-        8: "district9.glb",
-        9: "district10.glb",
-        10: "district11.glb",
-        11: "district12.glb",
-        12: "district13.glb"
+        1: "DIST 2.glb",
+        2: "DIST 3.glb",
+        3: "DIST 4.glb",
+        4: "DIST 5.glb",
+        5: "DIST 6.glb",
+        6: "DIST 7.glb",
+        7: "DIST 8.glb",
+        8: "DIST 9.glb",
+        9: "DIST 10.glb",
+        10: "DIST 11.glb",
+        11: "DIST 12.glb",
+        12: "DIST 13.glb"
     };
 
     function initScene() {
