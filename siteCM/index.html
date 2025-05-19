@@ -11,7 +11,25 @@
 
 <header>
 
-    <img src="imgs/hunger.gif" alt="Hunger Games GIF" style="position: absolute; top: 10px; left: 10px; width: 15%; height: auto;">
+    <img id="hoverSoundImage" src="imgs/hunger.gif" alt="Hunger Games GIF" style="position: absolute; top: 10px; left: 10px; width: 15%; height: auto;">
+
+    <audio id="hoverSound" src="./audio/mockingjay.mp3" preload="auto"></audio>
+
+<script>
+  const img = document.getElementById('hoverSoundImage');
+  const sound = document.getElementById('hoverSound');
+
+  img.addEventListener('mouseenter', () => {
+    sound.currentTime = 0; // restart sound
+    sound.play();
+  });
+
+  // Optional: stop the sound when mouse leaves
+  img.addEventListener('mouseleave', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+</script>
     
     <button class="menu-button">☰</button>
     <div class="menu">
@@ -32,19 +50,19 @@
         <p>Please click on an icon of a district</p>
         <div class="map-container">
             <img src="imgs/HungerGamesPanem.webp" alt="Map of Panem" class="map">
-            <div class="district" id="districtCapitol" style="top: 29.5%; left: 30.5%;" onclick="goToCapitol()"></div>
-            <div class="district" id="district1" style="top: 17%; left: 32.25%;" onclick="goToDistrict(1)"></div>
-            <div class="district" id="district2" style="top: 43.5%; left: 33.5%;" onclick="goToDistrict(2)"></div>
-            <div class="district" id="district3" style="top: 32%; left: 54%;" onclick="goToDistrict(3)"></div>
-            <div class="district" id="district4" style="top: 27%; left: 12.5%;" onclick="goToDistrict(4)"></div>
-            <div class="district" id="district5" style="top: 51%; left: 21%;" onclick="goToDistrict(5)"></div>
-            <div class="district" id="district6" style="top: 16.5%; left: 60%;" onclick="goToDistrict(6)"></div>
-            <div class="district" id="district7" style="top: 3%; left: 27%;" onclick="goToDistrict(7)"></div>
-            <div class="district" id="district8" style="top: 45%; left: 54.25%;" onclick="goToDistrict(8)"></div>
-            <div class="district" id="district9" style="top: 28.5%; left: 43%;" onclick="goToDistrict(9)"></div>
-            <div class="district" id="district10" style="top: 68.5%; left: 33.75%;" onclick="goToDistrict(10)"></div>
-            <div class="district" id="district11" style="top: 56.75%; left: 49%;" onclick="goToDistrict(11)"></div>
-            <div class="district" id="district12" style="top: 40%; left: 66%;" onclick="goToDistrict(12)"></div>
+            <div class="district" id="districtCapitol" style="top: 29.5%; left: 30.5%;" data-sound="./audio/Capitol.mp3" onclick="goToCapitol()"></div>
+            <div class="district" id="district1" style="top: 17%; left: 32.25%;" data-sound="./audio/District 1.mp3" onclick="goToDistrict(1)"></div>
+            <div class="district" id="district2" style="top: 43.5%; left: 33.5%;" data-sound="./audio/District 2.mp3" onclick="goToDistrict(2)"></div>
+            <div class="district" id="district3" style="top: 32%; left: 54%;" data-sound="./audio/District 3.mp3" onclick="goToDistrict(3)"></div>
+            <div class="district" id="district4" style="top: 27%; left: 12.5%;" data-sound="./audio/District 4.mp3" onclick="goToDistrict(4)"></div>
+            <div class="district" id="district5" style="top: 51%; left: 21%;" data-sound="./audio/District 5.mp3" onclick="goToDistrict(5)"></div>
+            <div class="district" id="district6" style="top: 16.5%; left: 60%;" data-sound="./audio/District 6.mp3" onclick="goToDistrict(6)"></div>
+            <div class="district" id="district7" style="top: 3%; left: 27%;" data-sound="./audio/District 7.mp3" onclick="goToDistrict(7)"></div>
+            <div class="district" id="district8" style="top: 45%; left: 54.25%;" data-sound="./audio/District 8.mp3" onclick="goToDistrict(8)"></div>
+            <div class="district" id="district9" style="top: 28.5%; left: 43%;" data-sound="./audio/District 9.mp3" onclick="goToDistrict(9)"></div>
+            <div class="district" id="district10" style="top: 68.5%; left: 33.75%;" data-sound="./audio/District 10.mp3" onclick="goToDistrict(10)"></div>
+            <div class="district" id="district11" style="top: 56.75%; left: 49%;" data-sound="./audio/District 11.mp3" onclick="goToDistrict(11)"></div>
+            <div class="district" id="district12" style="top: 40%; left: 66%;" data-sound="./audio/District 12.mp3" onclick="goToDistrict(12)"></div>
             <div class="district" id="district13" style="top: 20%; left: 72%;"onclick="goToDistrict(13)"></div>
         </div>
     </div>
