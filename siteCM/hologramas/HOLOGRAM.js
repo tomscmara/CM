@@ -24,49 +24,54 @@ window.addEventListener('DOMContentLoaded', () => {
     camera.wheelPrecision = 1;
 
     // Carrega o modelo
-    BABYLON.SceneLoader.Append('/hologramas/', 'CAPITOL.glb', scene, () => {
-      console.log('Model loaded!');
+    BABYLON.SceneLoader.Append(
+  'https://student.dei.uc.pt/~luiscamara/CM/hologramas/', 
+  'CAPITOL.glb', 
+  scene, 
+  () => {
+    console.log('Model loaded!');
 
-      // Acede ao mesh do objeto carregado
-      const mesh = scene.meshes[scene.meshes.length - 1]; // geralmente o último é o carregado
+    // Acede ao mesh do objeto carregado
+    const mesh = scene.meshes[scene.meshes.length - 1]; // geralmente o último é o carregado
 
-      // Centraliza o objeto
-      mesh.position = new BABYLON.Vector3(0, 0, 0);
+    // Centraliza o objeto
+    mesh.position = new BABYLON.Vector3(0, 0, 0);
 
-      // Calcula o bounding info
-      const boundingInfo = mesh.getBoundingInfo();
+    // Calcula o bounding info
+    const boundingInfo = mesh.getBoundingInfo();
 
-      // Pega o centro do bounding box
-      const center = boundingInfo.boundingBox.centerWorld;
+    // Pega o centro do bounding box
+    const center = boundingInfo.boundingBox.centerWorld;
 
-      // Ajusta o alvo da câmera para o centro do objeto
-      camera.target = center;
+    // Ajusta o alvo da câmera para o centro do objeto
+    camera.target = center;
 
-      // Calcula o raio para a câmera baseado no tamanho do bounding box
-      const extendSize = boundingInfo.boundingBox.extendSizeWorld;
-      const maxExtend = Math.max(extendSize.x, extendSize.y, extendSize.z);
+    // Calcula o raio para a câmera baseado no tamanho do bounding box
+    const extendSize = boundingInfo.boundingBox.extendSizeWorld;
+    const maxExtend = Math.max(extendSize.x, extendSize.y, extendSize.z);
 
-      // Define limites de zoom
-      camera.lowerRadiusLimit = maxExtend * 5;  // Zoom máximo
-      camera.upperRadiusLimit = maxExtend * 15; // Zoom mínimo
+    // Define limites de zoom
+    camera.lowerRadiusLimit = maxExtend * 5;  // Zoom máximo
+    camera.upperRadiusLimit = maxExtend * 15; // Zoom mínimo
 
-      // Define limites de ângulo vertical da câmera
-      camera.lowerBetaLimit = Math.PI / 6;  // Ângulo mínimo
-      camera.upperBetaLimit = Math.PI / 2;  // Ângulo máximo
+    // Define limites de ângulo vertical da câmera
+    camera.lowerBetaLimit = Math.PI / 6;  // Ângulo mínimo
+    camera.upperBetaLimit = Math.PI / 2;  // Ângulo máximo
 
-      // Ajusta o raio inicial da câmera
-      camera.radius = maxExtend * 1;
+    // Ajusta o raio inicial da câmera
+    camera.radius = maxExtend * 1;
 
-      // Multiplicador para afastar mais a câmera, experimenta aumentar se quiseres
-      const distanceFactor = 1;
+    // Multiplicador para afastar mais a câmera, experimenta aumentar se quiseres
+    const distanceFactor = 1;
+    cameraRadius = maxExtend * distanceFactor;
 
-      cameraRadius = maxExtend * distanceFactor;
-
-      // Aplica o raio à câmera
-      
-    }, null, (scene, message) => {
-      console.error('Error loading model:', message);
-    });
+    // Aplica o raio à câmera
+  },
+  null,
+  (scene, message) => {
+    console.error('Error loading model:', message);
+  }
+);
 
 // Variável para guardar ângulo inicial da câmera (mesmo valor inicial que cameraAlpha)
 const initialAlpha = Math.PI / 2;
