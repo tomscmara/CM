@@ -6,10 +6,8 @@ import { GLTFLoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders
 
 const container = document.getElementById('model-container');
 
-// Make sure container has width & height in CSS!
-
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xdddddd);
+scene.background = new THREE.Color(----);
 
 const camera = new THREE.PerspectiveCamera(
   75,
