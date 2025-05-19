@@ -7,17 +7,17 @@ body {
     color: red;
     text-align: center;
 }
-
+/*
 #threeD-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 200px;
     height: 200px;
-    background-color: red; /* Just for debugging */
+    background-color: red;  Just for debugging 
     color: rgb(255, 255, 255);
     z-index: 1000;
-}
+}*/
 
 .container {
     padding: 40px 20px;

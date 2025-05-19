@@ -1,3 +1,5 @@
+/* 
+
 import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
@@ -65,3 +67,4 @@ window.addEventListener('resize', () => {
 
   renderer.setSize(width, height);
 });
+*/
