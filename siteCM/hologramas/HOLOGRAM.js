@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const maxExtend = Math.max(extendSize.x, extendSize.y, extendSize.z);
 
       // Multiplicador para afastar mais a câmera, experimenta aumentar se quiseres
-      const distanceFactor = 100;
+      const distanceFactor = 50;
 
       cameraRadius = maxExtend * distanceFactor;
 
