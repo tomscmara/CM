@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     camera.wheelPrecision = 1;
 
     // Carrega o modelo
-    BABYLON.SceneLoader.Append('https://tomscmara.github.io/CM/siteCM/hologramas/', 'CAPITOL.glb', scene, () => {
+    BABYLON.SceneLoader.Append('CAPITOL.glb', scene, () => {
       console.log('Model loaded!');
 
       // Acede ao mesh do objeto carregado
