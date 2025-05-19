@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slide');
-    const fullscreenBtn = document.querySelector('.fullscreen-btn');
     const slideshowContainer = document.querySelector('.slideshow-container');
 
     const canvas = document.getElementById('renderCanvas');
@@ -68,14 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('.prev').addEventListener('click', () => {
         slideIndex = (slideIndex - 1 + slides.length) % slides.length;
         showSlide(slideIndex);
-    });
-
-    fullscreenBtn.addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-            slideshowContainer.requestFullscreen();
-        } else {
-            document.exitFullscreen();
-        }
     });
 
     initScene();

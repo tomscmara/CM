@@ -20,7 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
     camera.lowerRadiusLimit = cameraRadius;
     camera.upperRadiusLimit = cameraRadius;
     camera.allowUpsideDown = false;
-    camera.panningSensibility = 0;
+    camera.panningSensibility = 50;
+    camera.wheelPrecision = 1;
 
     // Carrega o modelo
     BABYLON.SceneLoader.Append('/hologramas/', 'CAPITOL.glb', scene, () => {
@@ -28,6 +29,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
       // Acede ao mesh do objeto carregado
       const mesh = scene.meshes[scene.meshes.length - 1]; // geralmente o último é o carregado
+
+      // Centraliza o objeto
+      mesh.position = new BABYLON.Vector3(0, 0, 0);
 
       // Calcula o bounding info
       const boundingInfo = mesh.getBoundingInfo();
@@ -42,16 +46,24 @@ window.addEventListener('DOMContentLoaded', () => {
       const extendSize = boundingInfo.boundingBox.extendSizeWorld;
       const maxExtend = Math.max(extendSize.x, extendSize.y, extendSize.z);
 
+      // Define limites de zoom
+      camera.lowerRadiusLimit = maxExtend * 5;  // Zoom máximo
+      camera.upperRadiusLimit = maxExtend * 15; // Zoom mínimo
+
+      // Define limites de ângulo vertical da câmera
+      camera.lowerBetaLimit = Math.PI / 6;  // Ângulo mínimo
+      camera.upperBetaLimit = Math.PI / 2;  // Ângulo máximo
+
+      // Ajusta o raio inicial da câmera
+      camera.radius = maxExtend * 1;
+
       // Multiplicador para afastar mais a câmera, experimenta aumentar se quiseres
-      const distanceFactor = 50;
+      const distanceFactor = 1;
 
       cameraRadius = maxExtend * distanceFactor;
 
       // Aplica o raio à câmera
-      camera.radius = cameraRadius;
-      camera.lowerRadiusLimit = cameraRadius;
-      camera.upperRadiusLimit = cameraRadius;
-
+      
     }, null, (scene, message) => {
       console.error('Error loading model:', message);
     });
