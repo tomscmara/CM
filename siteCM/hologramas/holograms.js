@@ -4,9 +4,10 @@ import { GLTFLoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders
 
 const container = document.getElementById('model-container');
 
+// Make sure container has width & height in CSS!
+
 const scene = new THREE.Scene();
-// Use black background for better contrast with your hologram model
-scene.background = new THREE.Color(0x000000);
+scene.background = new THREE.Color(0xdddddd);
 
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -14,37 +15,37 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-// Position camera so it sees the model nicely
 camera.position.set(0, 1, 3);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize(container.clientWidth, container.clientHeight);
 container.appendChild(renderer.domElement);
 
-// Controls for orbiting the model
-const controls = new OrbitControls(camera, renderer.domElement);
-// Set controls target to origin and update
-controls.target.set(0, 0, 0);
-controls.update();
+// Lights
+const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1.2);
+scene.add(light);
 
-// Add axes helper to debug scene orientation
+// Add AxesHelper to see axes in scene
 const axesHelper = new THREE.AxesHelper(5);
 scene.add(axesHelper);
+
+// Controls (mouse interaction)
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 0, 0);
+controls.update();
 
 // Load 3D Model (GLB/GLTF)
 const loader = new GLTFLoader();
 loader.load(
   './hologramas/CAPITOL.glb',
-  (gltf) => {
-    // Position and scale your model so it's visible
+  function (gltf) {
     gltf.scene.position.set(0, 0, 0);
     gltf.scene.scale.set(0.5, 0.5, 0.5);
     scene.add(gltf.scene);
-    console.log('Model loaded:', gltf);
   },
   undefined,
-  (error) => {
-    console.error('An error happened loading the model:', error);
+  function (error) {
+    console.error('An error happened:', error);
   }
 );
 
@@ -55,7 +56,6 @@ function animate() {
 }
 animate();
 
-// Handle window resizing
 window.addEventListener('resize', () => {
   const width = container.clientWidth;
   const height = container.clientHeight;
