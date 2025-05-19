@@ -10,19 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
     let camera, currentMesh;
 
     const holograms = {
-        0: "DIST 1.glb",
-        1: "DIST 2.glb",
-        2: "DIST 3.glb",
-        3: "DIST 4.glb",
-        4: "DIST 5.glb",
-        5: "DIST 6.glb",
-        6: "DIST 7.glb",
-        7: "DIST 8.glb",
-        8: "DIST 9.glb",
-        9: "DIST 10.glb",
-        10: "DIST 11.glb",
-        11: "DIST 12.glb",
-        12: "DIST 13.glb"
+        0: "CAPITOL.glb",
+        1: "DIST 1.glb",
+        2: "DIST 2.glb",
+        3: "DIST 3.glb",
+        4: "DIST 4.glb",
+        5: "DIST 5.glb",
+        6: "DIST 6.glb",
+        7: "DIST 7.glb",
+        8: "DIST 8.glb",
+        9: "DIST 9.glb",
+        10: "DIST 10.glb",
+        11: "DIST 11.glb",
+        12: "DIST 12.glb",
+        13: "DIST 13.glb"
     };
 
     function initScene() {
