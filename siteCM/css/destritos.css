@@ -29,9 +29,7 @@ h1 {
     text-shadow: 0 0 15px red;
 }
 
-p{
-    color: white;
-}
+
 
 .values {
     display: flex;
@@ -55,3 +53,29 @@ p{
     box-shadow: 0 0 20px gold;
 }
 
+.value-card p{
+    color:rgb(255, 252, 204);
+}
+
+button:hover {
+    background-color: darkred;
+    box-shadow: 0 0 10px darkred;
+}
+
+.return button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    background: gold;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.return button:hover {
+    background-color: darkred;
+    box-shadow: 0 0 10px darkred;
+}

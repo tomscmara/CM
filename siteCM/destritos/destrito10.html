@@ -11,6 +11,14 @@
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
@@ -32,10 +40,10 @@
   </div>
   
   <section class="content">
-    <h2>↓</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">↓</a></h2>
     <p> The industry is centered around farming, though the people face difficult working conditions, as in most of the other districts. </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>The Slaugtherline</h3>
         <p> A chillingly efficient facility where cattle are processed for meat. It's filled with rows of hanging carcasses and the constant sound of machinery. </p>
@@ -48,6 +56,9 @@
         <h3>The Stockyard Barracks</h3>
         <p> Housing for Peacekeepers and Capitol officials who monitor the livestock production. It’s a stark, functional building, far from luxurious, with a constant presence of armed guards. </p>
       </div>
+      <div class="value-card">
+        <h3>Branding Hall</h3>
+        <p> A large central barn and medical facility used for livestock tagging, veterinary care, and meat grading. Also serves as a meeting point for ranchers and Capitol inspectors.</p>
     </div>
   </section>
   <script src="../js/menu.js"></script>

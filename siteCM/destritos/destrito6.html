@@ -11,6 +11,14 @@
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
@@ -32,12 +40,12 @@
   </div>
   
   <section class="content">
-    <h2>↓</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">↓</a></h2>
     <p>
       Filled with tracks, terminals, fumes and forgotten tech it's a very industrial landscape.
     </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>The Train Yard</h3>
         <p> Central hub for transportation logistics - loading, unloading, repairs, and sorting of trains and freight. </p>
@@ -50,6 +58,9 @@
         <h3>The Rush Rooms</h3>
         <p> Illicit dens with black-lit interiors with glowing murals made of fluorescent chalk and broken LED scraps where "Morphling" is the most used drug to escape escape the harsh grind of reality. </p>
       </div>
+      <div class="value-card">
+        <h3> Rail Nexus</h3>
+        <p> An intricate hub of high-speed train systems and hovercraft depots. Known for its labyrinthine tunnels and immense mechanical workshops.</p>
     </div>
   </section>
   <script src="../js/menu.js"></script>

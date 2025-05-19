@@ -8,6 +8,7 @@
     height: 100vh;
     background: rgba(0, 0, 0, 10);
     transition: right 0.3s ease;
+    z-index: 1000;
 }
 
 .menu-button {
@@ -19,7 +20,7 @@
     padding: 10px;
     font-size: 20px;
     cursor: pointer;
-    border-radius: 25%;
+    border-radius: 15px;
 }
 
 .menu.active {
@@ -43,3 +44,13 @@
     text-decoration: none;
     font-size: 18px;
 }
+
+::-webkit-scrollbar{
+    color: black;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(128, 128, 128, 0.5);
+}
+
