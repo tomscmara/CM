@@ -11,12 +11,20 @@
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
           <div class="menu-options">
               <a class="menu-option" href="../index.html">Mundo</a>
-              <a class="menu-option" href="../destritos.html">Destritos</a>
+              <a class="menu-option" href="../destritos.html">Distritos</a>
               <a class="menu-option" href="../capitolio.html">Capitólio</a>
               <a class="menu-option" href="../personagens.html">Personagens</a>
           </div>
@@ -32,12 +40,12 @@
   </div>
   
   <section class="content">
-    <h2>↓</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">↓</a></h2>
     <p>
         Here the coal miners linger in the mines, starving, waiting for a song of freedom.
     </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>The Hob</h3>
         <p>12's black market, it was burnd down by the "Peacekeepers"</p>
@@ -50,6 +58,9 @@
         <h3>Meadow</h3>
         <p>Scruffy field just inside the fence sits near Katniss house,  plants and flowers grow there, both edible and medicinal.</p>
       </div>
+      <div class="value-card">
+        <h3>The Seam</h3>
+        <p>A bleak residential sector known for its crumbling homes and coal dust. Adjacent to the mines and often a symbol of hardship.</p>
     </div>
   </section>
   <script src="../js/menu.js"></script>

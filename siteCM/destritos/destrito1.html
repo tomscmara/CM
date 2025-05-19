@@ -11,12 +11,20 @@
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
           <div class="menu-options">
               <a class="menu-option" href="../index.html">Mundo</a>
-              <a class="menu-option" href="../destritos.html">Destritos</a>
+              <a class="menu-option" href="../destritos.html">Distritos</a>
               <a class="menu-option" href="../capitolio.html">Capitólio</a>
               <a class="menu-option" href="../personagens.html">Personagens</a>
           </div>
@@ -32,12 +40,12 @@
   </div>
   
   <section class="content">
-    <h2>↓</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">↓</a></h2>
     <p>
         Manufacturing luxury items for the Capitol and training for the games. We are the best at it.
     </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>The House of Radiance</h3>
         <p>With gleaming marble floors, golden filigree, and walls embedded with shimmering gemstones, it's a grand and opulent building, serving as both a government center and an elite social hall.</p>
@@ -50,6 +58,16 @@
         <h3>Crystal Exchange</h3>
         <p>A dazzling center of commerce where the district’s luxury goods—jewelry, fine textiles, perfumes, and high-end decorative items—are bought, sold, and traded.</p>
       </div>
+      <div class="value-card">
+        <h3>Industry</h3>
+        <p> Produces luxury goods such as jewelry, perfume, and other high-end items exclusively for the Capitol.
+           Citizens live relatively well-off lives compared to other districts. </p>
+      </div>
+      <div class="value-card">
+        <h3>Culture</h3>
+        <p>Glorifies the Capitol values, status and apearance are central and some of the most important traits for the people.</p>
+      </div>
+      
     </div>
   </section>
   <script src="../js/menu.js"></script>

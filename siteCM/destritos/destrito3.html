@@ -11,12 +11,20 @@
     </head>
 
     <header>
+      <div class="return">
+        <button onclick="goBack()">Return</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       <button class="menu-button">☰</button>
       <div class="menu">
           <p class="close-menu">X</p>
           <div class="menu-options">
               <a class="menu-option" href="../index.html">Mundo</a>
-              <a class="menu-option" href="../destritos.html">Destritos</a>
+              <a class="menu-option" href="../destritos.html">Distritos</a>
               <a class="menu-option" href="../capitolio.html">Capitólio</a>
               <a class="menu-option" href="../personagens.html">Personagens</a>
           </div>
@@ -32,10 +40,10 @@
   </div>
   
   <section class="content">
-    <h2>↓</h2>
+    <h2><a href="#values" style="text-decoration: none; color: red;">↓</a></h2>
     <p> Engineering and wise thinking create unconventional game tactics but living with an industrial skyline doesn't quite prepare our survival instincts. </p>
 
-    <div class="values">
+    <div class="values" id="values">
       <div class="value-card">
         <h3>Binary Plaza</h3>
         <p>Where innovation, commerce, and daily life converge. A fusion of technology and urban design and a gathering place for engineers, merchants, and students.</p>
@@ -47,6 +55,10 @@
       <div class="value-card">
         <h3>The Cypher Academy</h3>
         <p> A specialized school that teaches encryption, robotics, and Capitol-approved cybersecurity methods.</p>
+      </div>
+      <div class="value-card">
+        <h3>Innovation Hub</h3>
+        <p>A top-secret lab complex where scientists and engineers develop Capitol tech. Under constant surveillance and heavily guarded.</p>
       </div>
     </div>
   </section>
